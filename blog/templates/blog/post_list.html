@@ -1,26 +1,45 @@
 <!DOCTYPE html>
-
+{% load static %}
 <html lang="pl">
 
 <head>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <meta charset="UTF-8">
     <title>Cotentygrys test blog</title>
+
 </head>
 
 <body>
+<div class="page-header">
+<h1><a href="">Witam na stronie bloga o tygrysach</a></h1>
+<h2>Blog o tygrysach</h2>
+</div>
 
-<h2>Cotentygrys test blog</h2>
-<h1>Tu powstaje blog o tygrysach</h1>
-<p>Witam na stronie bloga</p>
+{% comment "Komentarz autora" %}
+    Tutaj lista postów
+    {% endcomment %}
 
+<div class="content container">
+    <div class="row">
 {% for post in posts %}
-<div>
-   <p>opublikowany: {{ post.publish_date }}</p>
+        <div class="col-md-8">
+<div class="post">
+    <div class="data">
+        <p>opublikowany: {{ post.publish_date }}</p>
+    </div>
+
     <h2><a href="">{{post.title}}</a></h2>
     <em>{{post.text|linebreaksbr }}</em>
 </div>
 {% endfor %}
+</div></div></div>
+
+<div class="stopka">
+
+</div>
+
 
 </body>
 
