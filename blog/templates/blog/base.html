@@ -2,31 +2,39 @@
 <html lang="pl">
         <head>
             <meta charset="UTF-8">
-            <title>Blog dla programistów</title>
+            <title>Blog o Tygrysach</title>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
             <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-            <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+            <script src="https://use.fontawesome.com/451851369b.js"></script>
+            <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         </head>
-<body>
-<nav class="navbar navbar-light" style="background-color: #C25100;">
-    <a class="navbar-brand" href="/">
-      <img class="logo" src="/media/images/logo.png" alt="" width="130">
-        {% if user.is_authenticated %}
+<body style="background-color:#fffff;">
+
+<nav class="navbar navbar-light" style="background-color: #1a0000;">
+    <a class="top-menu" href="/">Facebook</a>
+    <a class="top-menu" href="/">Instagram</a>
+    <a class="top-menu" href="/">Snapchat</a>
+    <a class="top-menu" href="/">Youtube</a>
+    <div class="plus">
+    {% if user.is_authenticated %}
     <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
     {% endif %}
-    </a>
+    </a></div>
 </nav>
     <div class="all">
 <nav class="navbar navbar-light bg-light">
       <div class="page-header">
-          <a class="nav-link2" href="/"><b>Blog dla programistów</b></a>
-        <a class="nav-link" href="/">Strona główna</a>
-        <a class="nav-link" href="#">Najnowsze artykuły</a>
-        <a class="nav-link" href="#">Pisz dla nas</a>
-        <a class="nav-link" href="#">Kontakt</a>
+          <img src="/media/images/logo.png" height="5%">
+        <a class="nav-link" href="/"><b>Strona główna</b></a>
+        <a class="nav-link" href="#"><b>Najnowsze artykuły</b></a>
+        <a class="nav-link" href="#"><b>Galeria</b></a>
+        <a class="nav-link" href="#"><b>Kontakt</b></a>
       </div>
+    <div class="gora">
+    <p class="title"><b>Blog o tygrysach</b></p>
+    <img class="baner" src="/media/images/baner.jpg"><br/><br/><br/>
+</div>
 </nav>
 <div class="content container">
     <div class="row">
@@ -41,31 +49,31 @@
 <footer class="site-footer">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-6">
+          <div class="col-xs-12 col-md-6">
             <h6><b>O nas</b></h6>
-            <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus, magna at euismod semper, turpis elit vulputate velit, consequat ultrices augue odio et libero. Pellentesque ac nulla elit. Aliquam suscipit nisl nunc, at tempus mi hendrerit at. Nullam tincidunt nisi sit amet orci mollis dictum. Nullam sollicitudin faucibus ante tempus pellentesque. Etiam euismod elit lacinia erat consequat vehicula. Aliquam id eros fermentum, aliquet arcu eu, porta orci. Nam lorem ipsum, convallis et condimentum feugiat, viverra at risus.</p>
           </div>
 
-          <div class="col-xs-6 col-md-3">
+          <div class="col-xs-6 col-md-2">
             <h6><b>Kategorie</b></h6>
             <ul class="footer-links">
-              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+              <li><a href="/">Tygrys bengalski</a></li>
+              <li><a href="/">Tygrys azjatycki</a></li>
+              <li><a href="/">Tygrys syberyjski</a></li>
+              <li><a href="/">Tygrys kaspijski</a></li>
+              <li><a href="/">Tygrys sumatrzański</a></li>
+              <li><a href="/">Tygrys chiński</a></li>
+                <li><a href="/">Tygrys indochiński</a></li>
             </ul>
           </div>
 
-          <div class="col-xs-6 col-md-3">
+          <div class="col-xs-6 col-md-2">
             <h6><b>Szybkie linki</b></h6>
             <ul class="footer-links">
-              <li><a href="http://scanfcode.com/about/">About Us</a></li>
-              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+              <li><a href="/">O nas</a></li>
+              <li><a href="/">Kontakt</a></li>
+              <li><a href="/">Współpraca</a></li>
+              <li><a href="/">Polityka Cookies</a></li>
             </ul>
           </div>
         </div>
@@ -75,20 +83,21 @@
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-12">
             <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
-         <a href="#">Strefa Kursów</a>.
+         <a href="#">Cotentygrys</a>.
             </p>
           </div>
 
           <div class="col-md-4 col-sm-6 col-xs-12">
             <ul class="social-icons">
-              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a class="instagram" href="#"><i class="fa fa-instagram fa-2x"></i></a></li>
+              <li><a class="facebook" href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
+              <li><a class="snapchat" href="#"><i class="fa fa-snapchat fa-2x"></i></a></li>
+              <li><a class="youtube" href="#"><i class="fa fa-youtube fa-2x"></i></a></li>
             </ul>
           </div>
         </div>
       </div>
 </footer></div>
+
 </body>
 </html>
